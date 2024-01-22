@@ -57,7 +57,7 @@ setFileUploadError(true);
         filePercent > 0 && filePercent < 100 ? 
           (<span className='text-slate-700'>{`Uploading... ${filePercent}%`}</span>) :
           (filePercent === 100? (
-            <span className="text-green-700">Image successfully uploaded!</span>) : 
+            <span className="text-green-700">Image successfully uploaded!!</span>) : 
             ("")
           )
         }
