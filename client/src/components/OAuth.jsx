@@ -1,7 +1,7 @@
 import {GoogleAuthProvider, getAuth, signInWithPopup} from '@firebase/auth';
 import { app } from '../firebase';
 import { useDispatch } from 'react-redux';
-import { signInSucess } from '../redux/user/userSlice';
+import { signInSuccess } from '../redux/user/userSlice';
 import { useNavigate } from 'react-router-dom'
 
 export default function OAuth() {
@@ -22,7 +22,7 @@ export default function OAuth() {
             body: JSON.stringify({ name: result.user.displayName, email: result.user.email, photo: result.user.photoURL}),
           })
           const data = await res.json();
-          dispatch(signInSucess(data));
+          dispatch(signInSuccess(data));
           navigate('/');
         }
         catch (error) {
