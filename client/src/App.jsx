@@ -8,7 +8,7 @@ import Header from "./components/Header";
 import PrivateRoute from "./components/PrivateRoute";
 
 export default function App() {
-  return <Router>
+  return (<Router>
     <Header/>
     <Routes>
       <Route path="/" element={<Home/>}/>
@@ -19,5 +19,5 @@ export default function App() {
       </Route>
       <Route path="/about" element={<About/>}/>
     </Routes>
-  </Router>
+  </Router>);
 }
