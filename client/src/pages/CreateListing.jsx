@@ -181,7 +181,7 @@ const handleSubmit = async (e) => {
                     <input className='p-3 border border-gray-300 rounded-lg' type="number" id="regularPrice" min="1000" max="100000" required onChange={handleChange} value={formData.regularPrice}/>
                     <div className="flex flex-col items-center">
                     <p>Regular Price</p>
-                    <span className='text-xs'>(₹ / month)</span>
+                    {formData.type==='rent' && (<span className='text-xs'>(₹ / month)</span>)}
                     </div>
                     </div>
                     {formData.offer && (
@@ -189,7 +189,7 @@ const handleSubmit = async (e) => {
                       <input className='p-3 border border-gray-300 rounded-lg' type="number" id="discountPrice" min="0" max="100000" required onChange={handleChange} value={formData.discountPrice}/>
                       <div className="flex flex-col items-center">
                       <p>Discounted Price</p>
-                      <span className='text-xs'>(₹ / month)</span>
+                      {formData.type==='rent' && (<span className='text-xs'>(₹ / month)</span>)}
                       </div>
                       </div>
                     )}
