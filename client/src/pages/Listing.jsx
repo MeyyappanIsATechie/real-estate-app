@@ -50,8 +50,8 @@ console.log(listing, currentUser._id);
             {listing.imageUrls.map((url) => (
                 <SwiperSlide key={url}>
                  <div className='h-[550px]' style={{background: `url(${url}) center no-repeat`, backgroundSize: 'cover',border: '1px solid red'}}></div>
-                </SwiperSlide> /*some aspect compatibility issues to be tackled*/
-            ))}
+                </SwiperSlide> 
+            ))} {/*some aspect compatibility issues to be tackled*/}
         </Swiper>
         <div className="fixed top-[13%] right-[3%] z-10 border rounded-full w-12 h-12 flex justify-center items-center bg-slate-100 cursor-pointer
         ">
@@ -78,7 +78,7 @@ console.log(listing, currentUser._id);
                 </p>
                 {
                     listing.offer && (
-                        <p className='bg-green-900 w-full max-w-[200px] text-white text-center p-1 rounded-md'>₹{+listing.regularPrice - +listing.discountPrice} offer</p>
+                        <p className='bg-green-900 w-full max-w-[200px] text-white text-center p-1 rounded-md'>₹{+listing.regularPrice - +listing.discountPrice} OFFER</p>
                     )
                 }
                 </div>
